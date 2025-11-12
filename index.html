@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flavia | Front-End Developer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #b33a3a;      /* accent red */
+      --secondary: #f8f3f3;    /* soft white */
+      --dark: #1a1a1a;         /* dark background */
+      --gray: #3a3a3a;         /* card background */
+      --accent: #e0cfcf;       /* subtle text tone */
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--dark);
+      color: var(--secondary);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(90deg, #2b2b2b, #1a1a1a);
+      color: var(--secondary);
+      padding: 25px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      color: var(--accent);
+      font-weight: 300;
+      margin: 8px 0 18px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--secondary);
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(179,58,58,0.4);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 70px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2, h3, h4 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: var(--accent);
+      line-height: 1.7;
+    }
+
+    #projects ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #projects li {
+      background-color: var(--gray);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #projects li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    #toTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+    }
+
+    #toTopBtn:hover {
+      background-color: #d94b4b;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 700px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+    #projects a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+#projects a:hover {
+  color: #fff;
+}
+#projects a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#projects a:hover {
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flavia Front-End Developer</h1>
+    <p>Designing clean, intuitive, and modern web interfaces</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m a front-end developer who loves transforming designs into smooth, responsive, and accessible web experiences. I focus on clean code, user-centered design, and performance optimization.</p>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <ul>
+        <li>
+          <h4>Functional Website</h4>
+          <p>A fully responsive small-business website with a clean layout and optimized navigation for both desktop and mobile.
+          <a href="https://salesresolvefrontend-6bgv.vercel.app/" target="_blank" rel="noopener noreferrer">
+            Sales resolve
+          </a>
+          </p>
+        </li>
+        <li>
+          <h4>Car Enthusiasts App</h4>
+          <p>An in-progress mobile-first app for German car fans, featuring modern UI and dynamic filters for easy exploration.
+            <a href="https://portofolio-git-master-flavias-projects-5e1773d0.vercel.app/">
+              GermanCarHub
+            </a>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>Let's collaborate or discuss new ideas. You can reach me at <strong>romanetflavia@gmail.com</strong>   or  <strong>0771510039 on Whatsapp</strong>.</p>
+    </section>
+  </main>
+
+  <button id="toTopBtn">↑</button>
+
+  <script>
+    // Scroll to top button
+    const toTopBtn = document.getElementById("toTopBtn");
+    window.addEventListener("scroll", () => {
+      toTopBtn.style.display = window.scrollY > 250 ? "block" : "none";
+    });
+    toTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Reveal on scroll animation
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          section.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>
